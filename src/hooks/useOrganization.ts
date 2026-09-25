@@ -1,6 +1,7 @@
 import { useState, useEffect, useCallback } from 'react';
 import type { Organization } from '@/types';
-import { getOrganization } from '@/services/organization.service';
+import { OrganizationType } from '@/types';
+import { MOCK_ORG_DATA } from '@/data/mockData';
 
 export interface UseOrganizationReturn {
   organization: Organization | null;
@@ -9,82 +10,34 @@ export interface UseOrganizationReturn {
   refetch: () => Promise<void>;
 }
 
+const mockOrg: Organization = {
+  id: 'sns-college',
+  name: MOCK_ORG_DATA.name,
+  type: OrganizationType.UNIVERSITY,
+  logo_url: 'https://images.unsplash.com/photo-1562774053-701939374585?auto=format&fit=crop&q=80&w=250',
+  description: 'SNS College of Engineering',
+  domain: 'snsct.org',
+  verified: true,
+  created_at: new Date().toISOString(),
+  updated_at: new Date().toISOString()
+};
+
 export function useOrganization(orgId: string | undefined): UseOrganizationReturn {
-  const [organization, setOrganization] = useState<Organization | null>(null);
-  const [isLoading, setIsLoading] = useState<boolean>(true);
+  const [organization, setOrganization] = useState<Organization | null>(mockOrg);
+  const [isLoading, setIsLoading] = useState<boolean>(false);
   const [error, setError] = useState<string | null>(null);
 
-  const fetchOrganizationData = useCallback(async (id: string) => {
-    try {
-      setIsLoading(true);
-      setError(null);
-
-      const { data, error: fetchError } = await getOrganization(id);
-
-      if (fetchError) {
-        setError(fetchError.message || 'Failed to fetch organization');
-        setOrganization(null);
-      } else {
-        setOrganization(data as Organization);
-        setError(null);
-      }
-    } catch (err: any) {
-      setError(err?.message || 'An unexpected error occurred while fetching organization');
-      setOrganization(null);
-    } finally {
-      setIsLoading(false);
-    }
-  }, []);
-
   useEffect(() => {
-    if (!orgId) {
-      setOrganization(null);
-      setIsLoading(false);
-      setError(null);
-      return;
-    }
-
-    let isMounted = true;
-
-    const loadOrganization = async () => {
-      try {
-        setIsLoading(true);
-        setError(null);
-
-        const { data, error: fetchError } = await getOrganization(orgId);
-
-        if (!isMounted) return;
-
-        if (fetchError) {
-          setError(fetchError.message || 'Failed to fetch organization');
-          setOrganization(null);
-        } else {
-          setOrganization(data as Organization);
-          setError(null);
-        }
-      } catch (err: any) {
-        if (!isMounted) return;
-        setError(err?.message || 'An unexpected error occurred while fetching organization');
-        setOrganization(null);
-      } finally {
-        if (isMounted) {
-          setIsLoading(false);
-        }
-      }
-    };
-
-    loadOrganization();
-
-    return () => {
-      isMounted = false;
-    };
+    setOrganization(mockOrg);
+    setIsLoading(false);
+    setError(null);
   }, [orgId]);
 
   const refetch = useCallback(async () => {
-    if (orgId) {
-      await fetchOrganizationData(orgId);
-    }
-  }, [orgId, fetchOrganizationData]);
+    setOrganization(mockOrg);
+    setIsLoading(false);
+  }, []);
 
   return { organization, isLoading, error, refetch };
 }
+

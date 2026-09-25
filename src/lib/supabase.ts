@@ -1,4 +1,18 @@
 // Mock Supabase client for Frontend-Only Demo Mode
+const chainableMock: any = {
+  select: () => chainableMock,
+  order: () => chainableMock,
+  eq: () => chainableMock,
+  neq: () => chainableMock,
+  in: () => chainableMock,
+  single: async () => ({ data: null, error: null }),
+  then: (resolve: any) => resolve({ data: [], error: null }),
+  insert: () => chainableMock,
+  update: () => chainableMock,
+  delete: () => chainableMock,
+  upsert: () => chainableMock,
+};
+
 export const supabase: any = {
   auth: {
     getSession: async () => ({ data: { session: null }, error: null }),
@@ -8,16 +22,6 @@ export const supabase: any = {
     signUp: async () => ({ error: null }),
     signOut: async () => ({ error: null }),
   },
-  from: () => ({
-    select: () => ({
-      eq: () => ({
-        single: async () => ({ data: null, error: null }),
-        select: async () => ({ data: [], error: null }),
-      }),
-      single: async () => ({ data: null, error: null }),
-    }),
-    insert: async () => ({ data: null, error: null }),
-    update: async () => ({ data: null, error: null }),
-    delete: async () => ({ data: null, error: null }),
-  }),
+  from: () => chainableMock,
 };
+

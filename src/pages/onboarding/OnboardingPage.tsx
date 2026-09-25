@@ -1,7 +1,5 @@
 import { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
-import { useAuth } from '@/contexts/AuthContext';
-import { supabase } from '@/lib/supabase';
 import { Progress } from '@/components/ui/progress';
 import { Button } from '@/components/ui/button';
 import { ChevronLeft, ChevronRight, Loader2 } from 'lucide-react';
@@ -35,7 +33,6 @@ export interface OnboardingData {
 const TOTAL_STEPS = 8;
 
 export default function OnboardingPage() {
-  const { user } = useAuth();
   const navigate = useNavigate();
   const [currentStep, setCurrentStep] = useState(1);
   const [isSubmitting, setIsSubmitting] = useState(false);
@@ -79,86 +76,15 @@ export default function OnboardingPage() {
   };
 
   const handleSubmit = async () => {
-    if (!user) return;
     setIsSubmitting(true);
     setError(null);
     try {
-      let finalOrgId = onboardingData.organizationId;
-      
-      // 1. Create or find the organization
-      if (!finalOrgId && onboardingData.organizationName) {
-        const { data: newOrg, error: orgError } = await supabase
-          .from('organizations')
-          .insert({
-            name: onboardingData.organizationName,
-            type: onboardingData.orgType,
-          })
-          .select()
-          .single();
-          
-        if (orgError) throw orgError;
-        finalOrgId = newOrg.id;
-      }
-
-      // 2. Update profile with all fields
-      const { error: profileError } = await supabase
-        .from('profiles')
-        .update({
-          full_name: onboardingData.fullName,
-          bio: onboardingData.bio,
-          github_url: onboardingData.githubUrl,
-          linkedin_url: onboardingData.linkedinUrl,
-          portfolio_url: onboardingData.portfolioUrl,
-          department: onboardingData.department,
-          year_of_study: onboardingData.yearOfStudy,
-          section: onboardingData.section,
-          network_preference: onboardingData.networkPreference,
-          onboarding_completed: true,
-        })
-        .eq('id', user.id);
-
-      if (profileError) throw profileError;
-
-      // 3. Create organization_members entry
-      if (finalOrgId) {
-        const { error: memberError } = await supabase
-          .from('organization_members')
-          .insert({
-            user_id: user.id,
-            organization_id: finalOrgId,
-            role: 'member',
-          });
-          
-        if (memberError) throw memberError;
-      }
-
-      // 4. Create user_skills entries for teach and learn skills
-      const teachSkillInserts = onboardingData.teachSkills.map(skillId => ({
-        user_id: user.id,
-        skill_id: skillId,
-        skill_type: 'teach',
-      }));
-      
-      const learnSkillInserts = onboardingData.learnSkills.map(skillId => ({
-        user_id: user.id,
-        skill_id: skillId,
-        skill_type: 'learn',
-      }));
-      
-      const allSkills = [...teachSkillInserts, ...learnSkillInserts];
-      if (allSkills.length > 0) {
-        const { error: skillsError } = await supabase
-          .from('user_skills')
-          .insert(allSkills);
-          
-        if (skillsError) throw skillsError;
-      }
-
-      // 6. Navigate to /dashboard
+      localStorage.setItem("skillbridge_onboarding", JSON.stringify(onboardingData));
+      // Navigate to /dashboard
       navigate('/dashboard');
     } catch (err: any) {
       console.error('Error saving onboarding data:', err);
-      setError(err.message || 'An error occurred while saving your profile.');
+      setError('An error occurred while saving your profile.');
     } finally {
       setIsSubmitting(false);
     }
