@@ -1,24 +1,57 @@
-# SkillBridge
+# ðŸŽ“ SkillBridge
 
 > **Learn. Share. Mentor. Build. Grow.**
 
-## Team
-
-**Team Name:** Tech Clan
-
-### Team Members
-
-- Bharanidharan S
-- Dinesh S
-- Madhiyarasu R
+[![Problem Statement](https://img.shields.io/badge/Problem%20Statement-WEB--04%20Student%20Skill%20Exchange-blue.svg)](#problem-statement)
+[![Team](https://img.shields.io/badge/Team-Tech%20Clan-orange.svg)](#team)
+[![AI Engine](https://img.shields.io/badge/AI-Google%20Gemini-green.svg)](#5-ai-powered-skill-matching)
+[![Stack](https://img.shields.io/badge/Stack-React%20%7C%20FastAPI%20%7C%20PostgreSQL-purple.svg)](#17-technology-stack)
 
 ---
 
-## Problem Statement
+## ðŸ‘¥ Team & Project Details
 
-**WEB-04: Student Skill Exchange Platform**
+| Attribute | Details |
+|---|---|
+| **Team Name** | **Tech Clan** |
+| **Team Members** | Bharanidharan S, Dinesh S, Madhiyarasu R |
+| **Problem Statement** | **WEB-04: Student Skill Exchange Platform** |
 
-> Develop a web platform where students can exchange knowledge and skills with each other.
+> **Problem Statement Description:**
+> Develop a web platform where students can exchange knowledge and skills with each other within and across educational organizations.
+
+---
+
+## ðŸ“‹ Table of Contents
+
+- [1. Project Overview](#1-project-overview)
+- [2. Core Concept](#2-core-concept)
+- [3. Organization-Based Foundation](#3-organization-based-foundation)
+- [4. Student Skill Profile](#4-student-skill-profile)
+- [5. AI-Powered Skill Matching](#5-ai-powered-skill-matching)
+- [6. Knowledge Exchange](#6-knowledge-exchange)
+- [7. Student Mentor System](#7-student-mentor-system)
+- [8. Project Help Hub](#8-project-help-hub)
+- [9. Learning Hub](#9-learning-hub)
+- [10. Learning + Mentoring Integration](#10-learning--mentoring-integration)
+- [11. Skill Verification](#11-skill-verification)
+- [12. Reputation and Contribution](#12-reputation-and-contribution)
+- [13. Project Collaboration](#13-project-collaboration)
+- [14. Organization Skill Network](#14-organization-skill-network)
+- [15. Organization-Level Skill Insights](#15-organization-level-skill-insights)
+- [16. System Architecture](#16-system-architecture)
+- [17. Technology Stack](#17-technology-stack)
+- [18. API Structure](#18-api-structure)
+- [19. AI Matching Flow](#19-ai-matching-flow)
+- [20. Security and Access Control](#20-security-and-access-control)
+- [21. User Roles](#21-user-roles)
+- [22. End-to-End User Flow](#22-end-to-end-user-flow)
+- [23. Project Structure](#23-project-structure)
+- [24. Environment Variables](#24-environment-variables)
+- [25. Development & Setup](#25-development--setup)
+- [26. Complete SkillBridge Ecosystem](#26-complete-skillbridge-ecosystem)
+- [27. Tech Stack Summary](#27-tech-stack-summary)
+- [28. Team & Roles](#28-team--roles)
 
 ---
 
@@ -28,495 +61,303 @@
 
 The platform begins with **organization selection** as the foundation. Students select their college or organization and then choose whether they want to interact within their organization, with selected external organizations, or across the broader SkillBridge network.
 
-Students can:
+### Key Capabilities
 
-- Share skills with other students
-- Find people who can teach the skills they want to learn
-- Exchange knowledge reciprocally
-- Get help with project-related doubts
-- Connect with student mentors
-- Access structured courses and learning resources
-- Collaborate with students who have complementary skills
-- Build skill reputation through meaningful contributions
+Students can:
+- **Share skills** with other students
+- **Find people** who can teach the skills they want to learn
+- **Exchange knowledge** reciprocally
+- **Get help** with project-related doubts
+- **Connect** with student mentors
+- **Access** structured courses and learning resources
+- **Collaborate** with students who have complementary skills
+- **Build skill reputation** through meaningful contributions
 
 ---
 
-# 2. Core Concept
+## 2. Core Concept
 
-SkillBridge supports two primary knowledge flows.
+SkillBridge supports two primary knowledge flows:
 
-### Knowledge → Knowledge
+### ðŸ”„ Knowledge â†’ Knowledge
 
 Students exchange knowledge directly with other students.
 
-```text
+`	ext
 Student A
-   |
-   | Can Teach: Python
-   | Wants to Learn: UI/UX
-   |
-   v
+   â”‚
+   â”œâ”€ Can Teach: Python
+   â”œâ”€ Wants to Learn: UI/UX
+   â–¼
 SkillBridge Matching
-   |
-   v
+   â”‚
+   â–¼
 Student B
-   |
-   | Can Teach: UI/UX
-   | Wants to Learn: Python
-   |
-   v
+   â”‚
+   â”œâ”€ Can Teach: UI/UX
+   â””â”€ Wants to Learn: Python
+   â–¼
 Skill Exchange
-```
+`
 
-### Money → Knowledge
+### ðŸ“š Money â†’ Knowledge
 
 Students can access structured courses and other learning resources.
 
-```text
-Student
-   |
-   v
-Course / Learning Resource
-   |
-   v
-Learn
-   |
-   v
-Practice
-   |
-   v
-Project
-   |
-   v
-Skill Verification
-```
+`	ext
+Student â”€â”€â–º Course / Learning Resource â”€â”€â–º Learn â”€â”€â–º Practice â”€â”€â–º Project â”€â”€â–º Skill Verification
+`
 
 ---
 
-# 3. Organization-Based Foundation
+## 3. Organization-Based Foundation
 
-Organization selection is the base of SkillBridge.
+Organization selection is the foundation of SkillBridge.
 
 During onboarding, students provide:
+- **Name**
+- **College / Organization**
+- **Department**
+- **Year of Study**
+- **Skills Owned**
+- **Skills to Learn**
+- **Areas of Interest**
 
-- Name
-- College / Organization
-- Department
-- Year
-- Skills
-- Skills they want to learn
-- Areas of interest
+### Preferred Interaction Scope
 
 Students can select their preferred interaction scope:
-
-- **My Organization**
-- **External Organizations**
-- **Both**
-
-The selected organization and network scope are used when discovering students, mentors, and collaborators.
+- ðŸ¢ **My Organization**: Connect only within current college/organization.
+- ðŸŒ **External Organizations**: Connect with selected peer organizations.
+- ðŸ”„ **Both**: Access the complete SkillBridge network.
 
 ---
 
-# 4. Student Skill Profile
+## 4. Student Skill Profile
 
-Each student has a SkillBridge profile containing:
+Each student profile on SkillBridge includes:
 
-- Personal information
-- Organization
-- Department
-- Year
-- Skills offered
-- Skills required
-- Skill proficiency
-- Projects
-- Learning interests
-- Mentoring interests
-- Contributions
-- Feedback
-- Skill verification status
+- **Personal Information**: Name, Department, Year, Organization
+- **Skill Proficiency**: Skills offered, skills required, level of expertise
+- **Projects**: Active and completed project showcases
+- **Interests**: Learning & mentoring focus areas
+- **Social Proof**: Peer feedback, contributions, and verified skill badges
 
-### Example
+### Sample Profile Representation
 
-```text
+`	ext
 Bharani Dharan
-AI & Data Science
-SNS College of Engineering
+AI & Data Science | SNS College of Engineering
 
 Can Teach:
-- Python
-- Machine Learning
-- Generative AI
+  â€¢ Python
+  â€¢ Machine Learning
+  â€¢ Generative AI
 
 Wants to Learn:
-- UI/UX
-- Figma
+  â€¢ UI/UX
+  â€¢ Figma
 
 Projects:
-- AI Document Classification
-- Sign Language Translator
+  â€¢ AI Document Classification
+  â€¢ Sign Language Translator
 
 Verified Skills:
-- Python
-- Machine Learning
-```
+  âœ” Python
+  âœ” Machine Learning
+`
 
 ---
 
-# 5. AI-Powered Skill Matching
+## 5. AI-Powered Skill Matching
 
-SkillBridge uses **Google Gemini** as the primary LLM for intelligent processing.
+SkillBridge uses **Google Gemini** as the primary LLM for intelligent semantic processing.
 
-The matching system can consider:
+The matching algorithm considers:
+- Skills offered vs. Skills required
+- Proficiency levels & experience depth
+- Organization & network scope preferences
+- Project requirements & domain context
+- Peer rating & availability
 
-- Skills offered
-- Skills required
-- Skill level
-- Organization
-- Learning interests
-- Project requirements
-- Mentoring requirements
-- Preferred network scope
+### Reciprocal Skill Matching Example
 
-## Reciprocal Matching
+`	ext
+Student A:  Can Teach: Python  â”‚ Wants: Figma
+Student B:  Can Teach: Figma   â”‚ Wants: Python
 
-Example:
-
-```text
-Student A
-Can Teach  -> Python
-Wants      -> Figma
-
-Student B
-Can Teach  -> Figma
-Wants      -> Python
-```
-
-SkillBridge identifies the relationship as a potential **reciprocal skill match**.
-
-This provides a clear reason for both students to connect.
+ðŸ’¡ SkillBridge Result: HIGH-CONFIDENCE RECIPROCAL MATCH FOUND!
+`
 
 ---
 
-# 6. Knowledge Exchange
+## 6. Knowledge Exchange
 
-Students can create skill exchange requests.
+Students can create and respond to structured skill exchange requests.
 
-### Example
+### Example Request
 
-```text
-I can teach:
-Python
+`	ext
+I can teach:      Python
+I want to learn:  Figma
+Session Type:     30-minute interactive sessions
+`
 
-I want to learn:
-Figma
+### Exchange Lifecycle
 
-Preferred:
-30-minute sessions
-```
-
-A suitable student can accept the exchange request.
-
-The platform can then support:
-
-- Exchange requests
-- Request acceptance / rejection
-- Communication
-- Learning sessions
-- Exchange completion
-- Feedback
-- Ratings
+1. **Create Request** â†’ Specify teaching & learning topics.
+2. **AI Match & Accept** â†’ Counterpart accepts exchange request.
+3. **Session Execution** â†’ Conduct peer learning session.
+4. **Completion & Review** â†’ Submit feedback, ratings, and skill endorsements.
 
 ---
 
-# 7. Student Mentor System
+## 7. Student Mentor System
 
-SkillBridge allows experienced students to act as **peer mentors**.
+SkillBridge empowers experienced students to act as **Peer Mentors**.
 
-Students developing projects can raise technical doubts on the platform.
+### Project Doubt Resolution Workflow
 
-### Example
+`	ext
+Project Doubt â”€â”€â–º AI Classification â”€â”€â–º Skill Identification â”€â”€â–º Mentor Recommendation â”€â”€â–º Session â”€â”€â–º Resolution
+`
 
-```text
-Project:
-Campus Management System
+### Mentor Contributions
 
-Technology:
-FastAPI + React
-
-Problem:
-JWT authentication is returning 401.
-
-Category:
-Backend Development
-```
-
-SkillBridge identifies students with relevant skills and recommends suitable mentors.
-
-### Mentor Matching Flow
-
-```text
-Project Doubt
-      |
-      v
-AI Classification
-      |
-      v
-Identify Required Skills
-      |
-      v
-Find Suitable Student Mentors
-      |
-      v
-Mentor Request
-      |
-      v
-Discussion / Session
-      |
-      v
-Problem Resolution
-```
-
-Mentors can provide:
-
-- Technical explanations
-- Project guidance
-- Code guidance
-- Documentation
-- Learning resources
-- Debugging guidance
-- Project reviews
+Mentors provide:
+- Technical explanations & code reviews
+- Architecture & debugging guidance
+- Documentation & curated learning resources
+- Project milestones evaluation
 
 ---
 
-# 8. Project Help Hub
+## 8. Project Help Hub
 
-The **Project Help Hub** allows students to raise project-related doubts.
+The **Project Help Hub** enables students to raise technical questions and get matched with domain experts.
 
-Students can provide:
+### Doubts Categorization & Attributes
 
-- Problem description
-- Technology used
-- Error message
-- Screenshots
-- Code snippets
-- Project information
-- Repository reference
+Students submit:
+- **Problem Description & Error Logs**
+- **Technology Stack** (Python, React, FastAPI, ML, PostgreSQL, UI/UX, Cloud, etc.)
+- **Repository Link / Code Snippets**
+- **Screenshots & Context**
 
-Possible categories include:
-
-- Python
-- Java
-- React
-- FastAPI
-- Machine Learning
-- Database
-- UI/UX
-- Cloud
-- APIs
-- Authentication
-- Deployment
-
-The system analyzes the problem and recommends relevant student mentors.
+AI automatically classifies issues and routes them to top-rated student mentors in that category.
 
 ---
 
-# 9. Learning Hub
+## 9. Learning Hub
 
-SkillBridge includes a structured learning area for courses and learning resources.
+Structured course catalog supporting the **Money â†’ Knowledge** ecosystem.
 
-### Learning Components
+### Key Components
 
-- Courses
-- Modules
-- Lessons
-- Quizzes
-- Learning paths
-- Practical projects
-- Skill assessments
-- Course progress
-- Completion status
-
-The Learning Hub supports the **Money → Knowledge** learning model through structured course-based learning.
+- **Structured Modules & Lessons**
+- **Interactive Quizzes & Skill Assessments**
+- **Practical Projects & Guided Challenges**
+- **Progress Tracking & Verified Completion Certificates**
 
 ---
 
-# 10. Learning + Mentoring Integration
+## 10. Learning + Mentoring Integration
 
-Learning and peer interaction are connected.
+Seamless connection between self-paced course learning and peer mentoring:
 
-```text
-Course
-  |
-  v
-Learn
-  |
-  v
-Practice
-  |
-  v
-Build Project
-  |
-  v
-Get Stuck?
-  |
-  v
-Project Help Hub
-  |
-  v
-Student Mentor
-  |
-  v
-Resolve Problem
-  |
-  v
-Complete Project
-  |
-  v
-Skill Verification
-```
+`	ext
+Course â”€â”€â–º Learn â”€â”€â–º Practice â”€â”€â–º Build Project â”€â”€â–º [Get Stuck?] â”€â”€â–º Help Hub â”€â”€â–º Student Mentor â”€â”€â–º Resolve â”€â”€â–º Verify Skill
+`
 
 ---
 
-# 11. Skill Verification
+## 11. Skill Verification
 
-SkillBridge can provide different ways to establish skill credibility.
+Building authentic skill credibility through multi-stage proof:
 
-### Skill Evidence
+### Evidence Types
+- GitHub Repositories & Real Projects
+- Certifications & Course Completion
+- Practical Assessment Challenges
 
-Students can provide:
+### Verification Pipeline
 
-- Projects
-- Certifications
-- Portfolio
-- GitHub projects
-- Course completion
-- Practical challenges
-
-### Verification Flow
-
-```text
-Skill Added
-    |
-    v
-Evidence / Assessment
-    |
-    v
-Practical Challenge
-    |
-    v
-Peer Feedback
-    |
-    v
-Verified Skill
-```
-
-Verified skills can be displayed on the student's SkillBridge profile.
+`	ext
+Skill Added â”€â”€â–º Evidence Submitted â”€â”€â–º Practical Challenge â”€â”€â–º Peer & Mentor Review â”€â”€â–º Verified Skill Badge
+`
 
 ---
 
-# 12. Reputation and Contribution
+## 12. Reputation and Contribution
 
-Students can build reputation through meaningful participation.
+Gamified reputation model encouraging active community participation.
 
-Contributions can include:
-
-- Teaching another student
-- Completing a skill exchange
-- Helping with project doubts
-- Mentoring
-- Completing learning activities
-- Providing useful feedback
-- Participating in projects
-
-The platform can maintain:
-
-- Contribution points
-- Mentor ratings
-- Peer feedback
-- Completed exchanges
-- Resolved project issues
-- Verified skills
+### Earn Points & Reputation By:
+- Teaching peer sessions
+- Completing reciprocal exchanges
+- Resolving technical doubts in Project Help Hub
+- Achieving verified mentor status
+- Publishing high-quality feedback
 
 ---
 
-# 13. Project Collaboration
+## 13. Project Collaboration
 
-SkillBridge can connect students with complementary skills.
+SkillBridge connects students with complementary skills to build multi-disciplinary project teams.
 
-Example:
-
-```text
-AI/ML Student
-      +
-Frontend Student
-      +
-Backend Student
-      +
-UI/UX Student
-      |
-      v
-Project Team
-```
-
-Students can discover potential collaborators based on project requirements and skill compatibility.
+`	ext
+AI/ML Specialist  +  Frontend Developer  +  Backend Developer  +  UI/UX Designer
+                         â”‚
+                         â–¼
+             ðŸš€ High-Impact Project Team
+`
 
 ---
 
-# 14. Organization Skill Network
+## 14. Organization Skill Network
 
-Each organization can have its own SkillBridge network.
+Hierarchical network view per organization:
 
-Example:
-
-```text
+`	ext
 SNS College of Engineering
-|
-+-- AI / ML
-+-- Web Development
-+-- Mobile Development
-+-- UI/UX
-+-- Cybersecurity
-+-- Cloud
-+-- Other Skills
-```
-
-Students can discover available skills and potential mentors within their organization.
-
-If a suitable person is unavailable, students can expand their search according to their selected network scope.
+ â”œâ”€â”€ AI / Machine Learning
+ â”œâ”€â”€ Web Development (React / FastAPI)
+ â”œâ”€â”€ Mobile Development (Flutter)
+ â”œâ”€â”€ UI/UX Design
+ â”œâ”€â”€ Cybersecurity
+ â””â”€â”€ Cloud Computing
+`
 
 ---
 
-# 15. Organization-Level Skill Insights
+## 15. Organization-Level Skill Insights
 
-SkillBridge can provide organization-level insights such as:
+Analytics dashboard for organization administrators:
 
-### Available Skills
+### Available Skills Bar Chart
 
-```text
-Python       ██████████
-AI/ML        ████████
-Web Dev      ███████
-UI/UX        █████
-Cloud        ███
-```
+`	ext
+Python       â–ˆâ–ˆâ–ˆâ–ˆâ–ˆâ–ˆâ–ˆâ–ˆâ–ˆâ–ˆ  (High)
+AI/ML        â–ˆâ–ˆâ–ˆâ–ˆâ–ˆâ–ˆâ–ˆâ–ˆ    (High)
+Web Dev      â–ˆâ–ˆâ–ˆâ–ˆâ–ˆâ–ˆâ–ˆ     (Medium)
+UI/UX        â–ˆâ–ˆâ–ˆâ–ˆâ–ˆ       (Medium)
+Cloud        â–ˆâ–ˆâ–ˆ         (Emerging)
+`
 
-### Skill Demand
+### Skill Demand Matrix
 
-```text
-React        HIGH
-Figma        HIGH
-Cloud        MEDIUM
-Flutter      MEDIUM
-Python       LOW
-```
-
-These insights can help identify differences between skills available within the organization and skills students want to learn.
+| Skill | Demand Level | Supply |
+|---|---|---|
+| **React** | ðŸ”´ HIGH | Moderate |
+| **Figma** | ðŸ”´ HIGH | Low |
+| **Cloud** | ðŸŸ¡ MEDIUM | Low |
+| **Flutter** | ðŸŸ¡ MEDIUM | Moderate |
+| **Python** | ðŸŸ¢ LOW | High |
 
 ---
 
-# 16. System Architecture
+## 16. System Architecture
 
-```text
+`	ext
                          +-----------------------+
                          |         USER          |
                          |   Student / Mentor    |
@@ -528,7 +369,7 @@ These insights can help identify differences between skills available within the
                          |   Frontend / UI       |
                          +-----------+-----------+
                                      |
-                              REST API / HTTPS
+                               REST API / HTTPS
                                      |
                                      v
                          +-----------------------+
@@ -551,587 +392,213 @@ These insights can help identify differences between skills available within the
                          |      PostgreSQL       |
                          |       Database        |
                          +-----------------------+
-                                     |
-              +----------------------+----------------------+
-              |                      |                      |
-              v                      v                      v
-          Students               Skills                 Projects
-          Profiles              Courses               Mentoring
-          Organizations         Exchanges             Feedback
-```
+`
 
 ---
 
-# 17. Technology Stack
+## 17. Technology Stack
 
-## Frontend
+### Frontend
+- **Framework**: React + TypeScript
+- **Build Tool**: Vite
+- **Styling**: Tailwind CSS
+- **Design Tooling**: Lovable
 
-The frontend will be developed using **Lovable**, with the application based on:
-
-- React
-- TypeScript
-- Vite
-- Tailwind CSS
-- Responsive web UI
-
-### Frontend Responsibilities
-
-- User onboarding
-- Organization selection
-- Student dashboard
-- Skill profiles
-- Skill discovery
-- AI matching interface
-- Skill exchange
-- Mentor discovery
-- Project Help Hub
-- Learning Hub
-- Course interface
-- Project collaboration
-- Notifications
-- Profile and reputation
+### Backend
+- **Framework**: FastAPI (Python)
+- **Database**: PostgreSQL
+- **AI Model**: Google Gemini API
+- **Auth**: JWT Token-based Authentication
 
 ---
 
-## Backend
+## 18. API Structure
 
-### FastAPI
-
-The backend will use **Python FastAPI**.
-
-Responsibilities:
-
-- REST API
-- Authentication and authorization
-- User management
-- Organization management
-- Skill management
-- Matching logic
-- Skill exchange requests
-- Mentor management
-- Project help requests
-- Course management
-- Progress tracking
-- Feedback and ratings
-- Notifications
-- AI service integration
-
----
-
-## AI / LLM
-
-### Google Gemini
-
-Gemini will be used as the primary LLM.
-
-Potential AI responsibilities include:
-
-- Skill extraction
-- Intelligent skill matching
-- Mentor matching
-- Project doubt classification
-- Learning recommendations
-- Personalized learning paths
-- Course recommendations
-- Project guidance
-- Question classification
-
-### Example: Project Doubt Analysis
-
-```text
-Input:
-"JWT authentication is not working in my FastAPI project."
-
-AI Output:
-
-Category:
-Backend
-
-Technology:
-FastAPI
-
-Topic:
-Authentication
-
-Required Skills:
-FastAPI + JWT
-
-Recommended:
-Backend Mentors
-```
-
----
-
-## Database
-
-### PostgreSQL
-
-The system will use PostgreSQL for structured application data.
-
-### Main Entities
-
-```text
-Users
-Organizations
-Departments
-Skills
-UserSkills
-LearningGoals
-SkillMatches
-ExchangeRequests
-Mentors
-MentorshipRequests
-Projects
-ProjectDoubts
-DoubtResponses
-Courses
-CourseModules
-Enrollments
-Progress
-Assessments
-Feedback
-Ratings
-Notifications
-```
-
-### Simplified Relationship
-
-```text
-Organization
-     |
-     +-- Users
-           |
-           +-- Skills
-           +-- Learning Goals
-           +-- Projects
-           +-- Exchanges
-           +-- Mentorship
-           +-- Courses
-           +-- Feedback
-```
-
----
-
-# 18. API Structure
-
-```text
+`	ext
 /api
-|
-+-- /auth
-|   +-- login
-|   +-- register
-|   +-- logout
-|
-+-- /organizations
-|   +-- list
-|   +-- details
-|   +-- members
-|
-+-- /users
-|   +-- profile
-|   +-- skills
-|   +-- learning-goals
-|
-+-- /matches
-|   +-- discover
-|   +-- recommendations
-|
-+-- /exchanges
-|   +-- create
-|   +-- requests
-|   +-- status
-|
-+-- /mentors
-|   +-- discover
-|   +-- request
-|   +-- sessions
-|
-+-- /projects
-|   +-- create
-|   +-- members
-|   +-- doubts
-|
-+-- /courses
-|   +-- list
-|   +-- details
-|   +-- enrollment
-|
-+-- /progress
-|   +-- tracking
-|
-+-- /ai
-    +-- skill-extraction
-    +-- matching
-    +-- doubt-analysis
-    +-- recommendations
-```
+â”œâ”€â”€ /auth            â”€â”€â–º login, register, logout
+â”œâ”€â”€ /organizations   â”€â”€â–º list, details, members
+â”œâ”€â”€ /users           â”€â”€â–º profile, skills, learning-goals
+â”œâ”€â”€ /matches         â”€â”€â–º discover, recommendations
+â”œâ”€â”€ /exchanges       â”€â”€â–º create, requests, status
+â”œâ”€â”€ /mentors         â”€â”€â–º discover, request, sessions
+â”œâ”€â”€ /projects        â”€â”€â–º create, members, doubts
+â”œâ”€â”€ /courses         â”€â”€â–º list, details, enrollment
+â”œâ”€â”€ /progress        â”€â”€â–º tracking
+â””â”€â”€ /ai              â”€â”€â–º skill-extraction, matching, doubt-analysis
+`
 
 ---
 
-# 19. AI Matching Flow
+## 19. AI Matching Flow
 
-```text
-Student Profile
-      |
-      +-- Organization
-      +-- Skills
-      +-- Learning Goals
-      +-- Experience
-      +-- Project Requirements
-      |
-      v
-FastAPI Backend
-      |
-      v
-Matching Engine
-      |
-      v
-Gemini AI
-      |
-      v
-Match Analysis
-      |
-      +----------+----------+
-      |          |          |
-      v          v          v
-   Skill      Mentor      Project
-   Match      Match       Match
-      |          |          |
-      +----------+----------+
-                 |
-                 v
-        Recommended Users
-```
+`	ext
+Student Profile â”€â”€â–º FastAPI Backend â”€â”€â–º Matching Engine â”€â”€â–º Gemini AI â”€â”€â–º Match Analysis â”€â”€â–º Recommended Matches
+`
 
 ---
 
-# 20. Security and Access Control
+## 20. Security and Access Control
 
-Since SkillBridge is organization-based, access control is an important part of the system.
-
-The platform should support:
-
-- Authentication
-- Organization verification
-- Role-based access
-- Organization-level access control
-- Student and mentor permissions
-- Protected APIs
-- Input validation
-- Secure password handling
-- Controlled profile visibility
-- Reporting and blocking mechanisms
-
-### Example
-
-```text
-Student
-  |
-  v
-Organization
-  |
-  v
-Allowed Network
-  |
-  v
-Discover Students
-  |
-  +-- Learn
-  +-- Exchange
-  +-- Mentor
-  +-- Collaborate
-```
+- **Organization Verification**: Email & domain verification.
+- **RBAC**: Role-based access control (Student, Mentor, Org Admin, Platform Admin).
+- **Data Protection**: Encrypted auth tokens, secured API endpoints, granular profile privacy settings.
 
 ---
 
-# 21. User Roles
+## 21. User Roles
 
-## Student
-
-Can:
-
-- Create profile
-- Add skills
-- Add learning goals
-- Discover matches
-- Exchange skills
-- Request mentorship
-- Raise project doubts
-- Join courses
-- Work on projects
-- Provide feedback
-
-## Student Mentor
-
-Can additionally:
-
-- Accept mentorship requests
-- Resolve project doubts
-- Conduct sessions
-- Provide project guidance
-- Receive mentor feedback
-
-## Organization Admin
-
-Can:
-
-- Manage organization
-- Verify users
-- Manage organization access
-- Manage mentors
-- Manage courses
-- Monitor activity
-- View organization-level insights
-
-## Platform Admin
-
-Can:
-
-- Manage organizations
-- Manage platform users
-- Manage global content
-- Manage platform settings
-- Handle reports and moderation
+| Role | Permissions & Capabilities |
+|---|---|
+| **Student** | Create profile, request skill exchange, join courses, post doubts, build projects |
+| **Student Mentor** | Accept mentorship requests, resolve doubts, conduct sessions, endorse skills |
+| **Organization Admin** | Manage org members, verify student identity, view skill analytics |
+| **Platform Admin** | Platform-wide moderation, global course catalog, organization onboarding |
 
 ---
 
-# 22. End-to-End User Flow
+## 22. End-to-End User Flow
 
-```text
-                    REGISTER
-                       |
-                       v
-              SELECT ORGANIZATION
-                       |
-                       v
-              SELECT NETWORK SCOPE
-                       |
-                       v
-                BUILD PROFILE
-                       |
-                       v
-             ADD SKILLS / GOALS
-                       |
-                       v
-              ENTER SKILLBRIDGE
-                       |
-       +---------------+----------------+
-       |               |                |
-       v               v                v
-  Find Skill       Need Help         Learn
-       |               |                |
-       v               v                v
-  AI Matching     Project Doubt      Course
-       |               |                |
-       v               v                v
-Skill Exchange    Student Mentor      Practice
-       |               |                |
-       v               v                v
-   Feedback       Problem Solved     Project
-       |               |                |
-       +---------------+----------------+
-                       |
-                       v
-                 SKILL GROWTH
-                       |
-                       v
-                SKILL VERIFICATION
-                       |
-                       v
-                 BUILD REPUTATION
-                       |
-                       v
-                  BECOME MENTOR
-                       |
-                       v
-               HELP OTHER STUDENTS
-```
+`	ext
+Register â”€â”€â–º Select Org â”€â”€â–º Set Scope â”€â”€â–º Build Profile â”€â”€â–º Add Skills/Goals â”€â”€â–º SkillBridge Dashboard
+  â”‚
+  â”œâ”€â–º Find Skill Exchange â”€â”€â–º AI Match â”€â”€â–º Session â”€â”€â–º Feedback â”€â”€â”€â”€â”€â”€â”
+  â”œâ”€â–º Post Doubt â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â–º Mentor Match â”€â”€â–º Resolve â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”¼â”€â”€â–º Skill Growth â”€â”€â–º Verification â”€â”€â–º Become Mentor!
+  â””â”€â–º Join Course â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â–º Practice â”€â”€â–º Complete Project â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”˜
+`
 
 ---
 
-# 23. Project Structure
+## 23. Project Structure
 
-```text
+`	ext
 SkillBridge/
-|
-+-- frontend/
-|   +-- src/
-|   |   +-- components/
-|   |   +-- pages/
-|   |   +-- layouts/
-|   |   +-- hooks/
-|   |   +-- services/
-|   |   +-- types/
-|   |   +-- utils/
-|   +-- public/
-|   +-- package.json
-|   +-- README.md
-|
-+-- backend/
-|   +-- app/
-|   |   +-- main.py
-|   |   +-- api/
-|   |   +-- models/
-|   |   +-- schemas/
-|   |   +-- services/
-|   |   +-- core/
-|   |   +-- database/
-|   |   +-- ai/
-|   +-- requirements.txt
-|   +-- README.md
-|
-+-- docs/
-|   +-- architecture/
-|   +-- api/
-|   +-- database/
-|
-+-- .env.example
-+-- .gitignore
-+-- README.md
-```
+â”œâ”€â”€ frontend/
+â”‚   â”œâ”€â”€ src/
+â”‚   â”‚   â”œâ”€â”€ components/
+â”‚   â”‚   â”œâ”€â”€ pages/
+â”‚   â”‚   â”œâ”€â”€ layouts/
+â”‚   â”‚   â”œâ”€â”€ hooks/
+â”‚   â”‚   â”œâ”€â”€ services/
+â”‚   â”‚   â””â”€â”€ types/
+â”‚   â”œâ”€â”€ package.json
+â”‚   â””â”€â”€ README.md
+â”œâ”€â”€ backend/
+â”‚   â”œâ”€â”€ app/
+â”‚   â”‚   â”œâ”€â”€ main.py
+â”‚   â”‚   â”œâ”€â”€ api/
+â”‚   â”‚   â”œâ”€â”€ models/
+â”‚   â”‚   â”œâ”€â”€ schemas/
+â”‚   â”‚   â”œâ”€â”€ services/
+â”‚   â”‚   â””â”€â”€ ai/
+â”‚   â””â”€â”€ requirements.txt
+â”œâ”€â”€ .env.example
+â”œâ”€â”€ .gitignore
+â””â”€â”€ README.md
+`
 
 ---
 
-# 24. Environment Variables
+## 24. Environment Variables
 
-```env
-# Backend
-DATABASE_URL=
+Create a .env file in the root directory:
 
-# Gemini
-GEMINI_API_KEY=
+`env
+# Backend Database Configuration
+DATABASE_URL=postgresql://user:password@localhost:5432/skillbridge_db
 
-# Authentication
-SECRET_KEY=
+# Google Gemini AI API Key
+GEMINI_API_KEY=your_gemini_api_key_here
 
-# Frontend
-VITE_API_BASE_URL=
-```
+# JWT Authentication Secret
+SECRET_KEY=your_super_secret_jwt_key
 
-Sensitive credentials must not be committed to the repository.
+# Frontend API URL
+VITE_API_BASE_URL=http://localhost:8000/api
+`
 
 ---
 
-# 25. Development
+## 25. Development & Setup
 
-## Frontend
+### Frontend Setup
 
-```bash
+`ash
+cd frontend
 npm install
 npm run dev
-```
+`
 
-## Backend
+### Backend Setup
 
-```bash
+`ash
+cd backend
 pip install -r requirements.txt
 uvicorn app.main:app --reload
-```
-
-The exact commands may be adjusted according to the final project configuration.
+`
 
 ---
 
-# 26. Complete SkillBridge Ecosystem
+## 26. Complete SkillBridge Ecosystem
 
-```text
-                         SKILLBRIDGE
-                              |
-                     ORGANIZATION
-                       SELECTION
-                              |
-              +---------------+---------------+
-              |                               |
-       MY ORGANIZATION                 EXTERNAL NETWORK
-              |                               |
-              +---------------+---------------+
-                              |
-                       STUDENT PROFILE
-                              |
-              +---------------+---------------+
-              |               |               |
-          CAN TEACH      WANT TO LEARN    PROJECTS
-              |               |               |
-              +---------------+---------------+
-                              |
-                       AI MATCH ENGINE
-                              |
-       +----------------------+----------------------+
-       |                      |                      |
-       v                      v                      v
-KNOWLEDGE EXCHANGE      STUDENT MENTOR        LEARNING HUB
-       |                      |                      |
-Student <-> Student     Student -> Mentor     Course -> Student
-       |                      |                      |
-       +----------------------+----------------------+
-                              |
-                       SKILL GROWTH
-                              |
-              +---------------+---------------+
-              |               |               |
-          Challenge        Project          Course
-              |               |               |
-              +---------------+---------------+
-                              |
-                       SKILL VERIFICATION
-                              |
-                       REPUTATION / XP
-                              |
-                        BECOME MENTOR
-                              |
-                     HELP OTHER STUDENTS
-                              |
-                       NETWORK GROWS
-```
+`	ext
+                                  SKILLBRIDGE ECOSYSTEM
+                                           â”‚
+                                 ORGANIZATION SELECTION
+                                           â”‚
+                    â”Œâ”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”´â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”
+                    â–¼                                             â–¼
+             MY ORGANIZATION                               EXTERNAL NETWORK
+                    â””â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”¬â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”˜
+                                           â–¼
+                                    STUDENT PROFILE
+                                           â”‚
+                    â”Œâ”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”¼â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”
+                    â–¼                      â–¼                      â–¼
+                CAN TEACH            WANTS TO LEARN            PROJECTS
+                    â””â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”¬â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”˜
+                                           â–¼
+                                    AI MATCH ENGINE
+                                           â”‚
+             â”Œâ”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”¼â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”
+             â–¼                             â–¼                             â–¼
+    KNOWLEDGE EXCHANGE               STUDENT MENTOR                 LEARNING HUB
+   (Peer-to-Peer Learn)            (Doubt Resolution)            (Structured Courses)
+             â””â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”¬â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”˜
+                                           â–¼
+                                    SKILL VERIFICATION
+                                           â”‚
+                                     REPUTATION / XP
+                                           â”‚
+                                     BECOME MENTOR!
+`
 
 ---
 
-# 27. Tech Stack Summary
+## 27. Tech Stack Summary
 
-| Layer | Technology |
-|---|---|
-| Frontend Development | Lovable |
-| Frontend Framework | React |
-| Language | TypeScript |
-| Build Tool | Vite |
-| Styling | Tailwind CSS |
-| Backend | FastAPI |
-| Backend Language | Python |
-| Database | PostgreSQL |
-| LLM | Google Gemini |
-| API Communication | REST API |
-| Authentication | Token-based Authentication |
-| AI Integration | Gemini API |
-| Version Control | Git / GitHub |
+| Component | Technology | Description |
+|---|---|---|
+| **Frontend UI** | Lovable / React / Vite | Modern responsive user interface |
+| **Language** | TypeScript | Type-safe frontend application |
+| **Styling** | Tailwind CSS | Utility-first styling design system |
+| **Backend API** | FastAPI | High-performance Python async backend |
+| **Database** | PostgreSQL | Relational storage for user profiles & exchanges |
+| **AI Processing** | Google Gemini API | Intelligent skill extraction, classification & matching |
+| **Authentication** | OAuth2 / JWT | Secure token-based user sessions |
 
 ---
 
-# 28. Team
+## 28. Team & Roles
 
-## Tech Clan
+### Tech Clan
 
-| Member | Role |
-|---|---|
-| **Bharanidharan S** | Development / AI / System Design |
-| **Dinesh S** | Development / Backend / Integration |
-| **Madhiyarasu R** | Development / Frontend / UI |
+- **Bharanidharan S** - Development / AI / System Design
+- **Dinesh S** - Development / Backend / Integration
+- **Madhiyarasu R** - Development / Frontend / UI
 
 ---
 
-## Problem Statement Reference
-
-**WEB-04 — Student Skill Exchange Platform**
-
-> Develop a web platform where students can exchange knowledge and skills with each other.
-
-**Team:** Tech Clan
-
-**Members:** Bharanidharan S, Dinesh S, Madhiyarasu R
-
----
-
-## SkillBridge
-
-> **Learn. Share. Mentor. Build. Grow.**
-#   S k i l l B r i d g e  
- 
+<p align="center">
+  <b>Built with â¤ï¸ by Tech Clan for Student Skill Sharing</b>
+</p>
