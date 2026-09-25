@@ -3,7 +3,7 @@
 > **Learn. Share. Mentor. Build. Grow.**
 
 [![Problem Statement](https://img.shields.io/badge/Problem%20Statement-WEB--04%20Student%20Skill%20Exchange-blue.svg)](#problem-statement)
-[![Team](https://img.shields.io/badge/Team-Tech%20Clan-orange.svg)](#team)
+[![Team](https://img.shields.io/badge/Team-Tech%20Clan-orange.svg)](#28-team--roles)
 [![AI Engine](https://img.shields.io/badge/AI-Google%20Gemini-green.svg)](#5-ai-powered-skill-matching)
 [![Stack](https://img.shields.io/badge/Stack-React%20%7C%20FastAPI%20%7C%20PostgreSQL-purple.svg)](#17-technology-stack)
 
@@ -83,29 +83,20 @@ SkillBridge supports two primary knowledge flows:
 
 Students exchange knowledge directly with other students.
 
-`	ext
-Student A
-   â”‚
-   â”œâ”€ Can Teach: Python
-   â”œâ”€ Wants to Learn: UI/UX
-   â–¼
-SkillBridge Matching
-   â”‚
-   â–¼
-Student B
-   â”‚
-   â”œâ”€ Can Teach: UI/UX
-   â””â”€ Wants to Learn: Python
-   â–¼
-Skill Exchange
+`mermaid
+graph TD
+    A["Student A (Teaches: Python | Wants: UI/UX)"] --> Matching["SkillBridge AI Matching"]
+    B["Student B (Teaches: UI/UX | Wants: Python)"] --> Matching
+    Matching --> Exchange["Peer Knowledge Exchange"]
 `
 
 ### ðŸ“š Money â†’ Knowledge
 
 Students can access structured courses and other learning resources.
 
-`	ext
-Student â”€â”€â–º Course / Learning Resource â”€â”€â–º Learn â”€â”€â–º Practice â”€â”€â–º Project â”€â”€â–º Skill Verification
+`mermaid
+graph LR
+    Student --> Course["Course / Learning Resource"] --> Learn --> Practice --> Project --> Verification["Skill Verification"]
 `
 
 ---
@@ -126,9 +117,9 @@ During onboarding, students provide:
 ### Preferred Interaction Scope
 
 Students can select their preferred interaction scope:
-- ðŸ¢ **My Organization**: Connect only within current college/organization.
-- ðŸŒ **External Organizations**: Connect with selected peer organizations.
-- ðŸ”„ **Both**: Access the complete SkillBridge network.
+- **My Organization**: Connect only within current college/organization.
+- **External Organizations**: Connect with selected peer organizations.
+- **Both**: Access the complete SkillBridge network.
 
 ---
 
@@ -182,10 +173,10 @@ The matching algorithm considers:
 ### Reciprocal Skill Matching Example
 
 `	ext
-Student A:  Can Teach: Python  â”‚ Wants: Figma
-Student B:  Can Teach: Figma   â”‚ Wants: Python
+Student A:  Can Teach: Python  |  Wants: Figma
+Student B:  Can Teach: Figma   |  Wants: Python
 
-ðŸ’¡ SkillBridge Result: HIGH-CONFIDENCE RECIPROCAL MATCH FOUND!
+Result: High-Confidence Reciprocal Skill Match Found
 `
 
 ---
@@ -217,8 +208,13 @@ SkillBridge empowers experienced students to act as **Peer Mentors**.
 
 ### Project Doubt Resolution Workflow
 
-`	ext
-Project Doubt â”€â”€â–º AI Classification â”€â”€â–º Skill Identification â”€â”€â–º Mentor Recommendation â”€â”€â–º Session â”€â”€â–º Resolution
+`mermaid
+graph TD
+    Doubt["Project Doubt Raised"] --> Classify["AI Classification"]
+    Classify --> Identify["Identify Required Skills"]
+    Identify --> Find["Find Student Mentors"]
+    Find --> Session["Mentoring Session"]
+    Session --> Resolution["Problem Resolved"]
 `
 
 ### Mentor Contributions
@@ -264,8 +260,12 @@ Structured course catalog supporting the **Money â†’ Knowledge** ecosystem.
 
 Seamless connection between self-paced course learning and peer mentoring:
 
-`	ext
-Course â”€â”€â–º Learn â”€â”€â–º Practice â”€â”€â–º Build Project â”€â”€â–º [Get Stuck?] â”€â”€â–º Help Hub â”€â”€â–º Student Mentor â”€â”€â–º Resolve â”€â”€â–º Verify Skill
+`mermaid
+graph TD
+    Course["Course"] --> Learn["Learn"] --> Practice["Practice"] --> Build["Build Project"]
+    Build --> Check{"Stuck?"}
+    Check -- Yes --> Hub["Project Help Hub"] --> Mentor["Student Mentor"] --> Resolve["Resolve Issue"] --> Complete["Complete Project"] --> Verify["Skill Verification"]
+    Check -- No --> Complete
 `
 
 ---
@@ -281,8 +281,9 @@ Building authentic skill credibility through multi-stage proof:
 
 ### Verification Pipeline
 
-`	ext
-Skill Added â”€â”€â–º Evidence Submitted â”€â”€â–º Practical Challenge â”€â”€â–º Peer & Mentor Review â”€â”€â–º Verified Skill Badge
+`mermaid
+graph LR
+    Add["Skill Added"] --> Evidence["Submit Evidence"] --> Challenge["Practical Challenge"] --> Review["Peer / Mentor Review"] --> Badge["Verified Skill Badge"]
 `
 
 ---
@@ -304,11 +305,12 @@ Gamified reputation model encouraging active community participation.
 
 SkillBridge connects students with complementary skills to build multi-disciplinary project teams.
 
-`	ext
-AI/ML Specialist  +  Frontend Developer  +  Backend Developer  +  UI/UX Designer
-                         â”‚
-                         â–¼
-             ðŸš€ High-Impact Project Team
+`mermaid
+graph TD
+    AIML["AI / ML Specialist"] --> Team["Project Team"]
+    Frontend["Frontend Developer"] --> Team
+    Backend["Backend Developer"] --> Team
+    UIUX["UI / UX Designer"] --> Team
 `
 
 ---
@@ -333,7 +335,7 @@ SNS College of Engineering
 
 Analytics dashboard for organization administrators:
 
-### Available Skills Bar Chart
+### Available Skills Distribution
 
 `	ext
 Python       â–ˆâ–ˆâ–ˆâ–ˆâ–ˆâ–ˆâ–ˆâ–ˆâ–ˆâ–ˆ  (High)
@@ -347,51 +349,34 @@ Cloud        â–ˆâ–ˆâ–ˆ         (Emerging)
 
 | Skill | Demand Level | Supply |
 |---|---|---|
-| **React** | ðŸ”´ HIGH | Moderate |
-| **Figma** | ðŸ”´ HIGH | Low |
-| **Cloud** | ðŸŸ¡ MEDIUM | Low |
-| **Flutter** | ðŸŸ¡ MEDIUM | Moderate |
-| **Python** | ðŸŸ¢ LOW | High |
+| **React** | HIGH | Moderate |
+| **Figma** | HIGH | Low |
+| **Cloud** | MEDIUM | Low |
+| **Flutter** | MEDIUM | Moderate |
+| **Python** | LOW | High |
 
 ---
 
 ## 16. System Architecture
 
-`	ext
-                         +-----------------------+
-                         |         USER          |
-                         |   Student / Mentor    |
-                         +-----------+-----------+
-                                     |
-                                     v
-                         +-----------------------+
-                         |     React + TS        |
-                         |   Frontend / UI       |
-                         +-----------+-----------+
-                                     |
-                               REST API / HTTPS
-                                     |
-                                     v
-                         +-----------------------+
-                         |       FastAPI         |
-                         |      Backend API      |
-                         +-----------+-----------+
-                                     |
-              +----------------------+----------------------+
-              |                      |                      |
-              v                      v                      v
-      +---------------+      +---------------+      +---------------+
-      | Authentication|      | Business Logic|      | AI Services   |
-      | & Authorization|     | & Matching    |      | Gemini API    |
-      +---------------+      +---------------+      +---------------+
-              |                      |                      |
-              +----------------------+----------------------+
-                                     |
-                                     v
-                         +-----------------------+
-                         |      PostgreSQL       |
-                         |       Database        |
-                         +-----------------------+
+`mermaid
+graph TD
+    User["Student / Mentor"] --> Frontend["React + TypeScript Frontend"]
+    Frontend -- REST API / HTTPS --> Backend["FastAPI Backend API"]
+    
+    subgraph Services ["Backend Services"]
+        Auth["Authentication & Authorization"]
+        Logic["Business Logic & Matching"]
+        AI["AI Services (Google Gemini)"]
+    end
+    
+    Backend --> Auth
+    Backend --> Logic
+    Backend --> AI
+    
+    Auth --> DB[("PostgreSQL Database")]
+    Logic --> DB
+    AI --> DB
 `
 
 ---
@@ -416,24 +401,25 @@ Cloud        â–ˆâ–ˆâ–ˆ         (Emerging)
 
 `	ext
 /api
-â”œâ”€â”€ /auth            â”€â”€â–º login, register, logout
-â”œâ”€â”€ /organizations   â”€â”€â–º list, details, members
-â”œâ”€â”€ /users           â”€â”€â–º profile, skills, learning-goals
-â”œâ”€â”€ /matches         â”€â”€â–º discover, recommendations
-â”œâ”€â”€ /exchanges       â”€â”€â–º create, requests, status
-â”œâ”€â”€ /mentors         â”€â”€â–º discover, request, sessions
-â”œâ”€â”€ /projects        â”€â”€â–º create, members, doubts
-â”œâ”€â”€ /courses         â”€â”€â–º list, details, enrollment
-â”œâ”€â”€ /progress        â”€â”€â–º tracking
-â””â”€â”€ /ai              â”€â”€â–º skill-extraction, matching, doubt-analysis
+â”œâ”€â”€ /auth            â”€â”€> login, register, logout
+â”œâ”€â”€ /organizations   â”€â”€> list, details, members
+â”œâ”€â”€ /users           â”€â”€> profile, skills, learning-goals
+â”œâ”€â”€ /matches         â”€â”€> discover, recommendations
+â”œâ”€â”€ /exchanges       â”€â”€> create, requests, status
+â”œâ”€â”€ /mentors         â”€â”€> discover, request, sessions
+â”œâ”€â”€ /projects        â”€â”€> create, members, doubts
+â”œâ”€â”€ /courses         â”€â”€> list, details, enrollment
+â”œâ”€â”€ /progress        â”€â”€> tracking
+â””â”€â”€ /ai              â”€â”€> skill-extraction, matching, doubt-analysis
 `
 
 ---
 
 ## 19. AI Matching Flow
 
-`	ext
-Student Profile â”€â”€â–º FastAPI Backend â”€â”€â–º Matching Engine â”€â”€â–º Gemini AI â”€â”€â–º Match Analysis â”€â”€â–º Recommended Matches
+`mermaid
+graph LR
+    Profile["Student Profile"] --> Backend["FastAPI Engine"] --> Gemini["Google Gemini AI"] --> Result["Match Recommendations"]
 `
 
 ---
@@ -459,12 +445,16 @@ Student Profile â”€â”€â–º FastAPI Backend â”€â”€â–º 
 
 ## 22. End-to-End User Flow
 
-`	ext
-Register â”€â”€â–º Select Org â”€â”€â–º Set Scope â”€â”€â–º Build Profile â”€â”€â–º Add Skills/Goals â”€â”€â–º SkillBridge Dashboard
-  â”‚
-  â”œâ”€â–º Find Skill Exchange â”€â”€â–º AI Match â”€â”€â–º Session â”€â”€â–º Feedback â”€â”€â”€â”€â”€â”€â”
-  â”œâ”€â–º Post Doubt â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â–º Mentor Match â”€â”€â–º Resolve â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”¼â”€â”€â–º Skill Growth â”€â”€â–º Verification â”€â”€â–º Become Mentor!
-  â””â”€â–º Join Course â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â–º Practice â”€â”€â–º Complete Project â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”˜
+`mermaid
+graph TD
+    Start["Register"] --> Org["Select Organization"] --> Scope["Set Scope"] --> Profile["Build Profile"] --> Dashboard["SkillBridge Dashboard"]
+    Dashboard --> Exchange["Skill Exchange"]
+    Dashboard --> Doubt["Post Doubt"]
+    Dashboard --> Course["Join Course"]
+    Exchange --> Growth["Skill Growth"]
+    Doubt --> Growth
+    Course --> Growth
+    Growth --> Verify["Skill Verification"] --> Mentor["Become Mentor"]
 `
 
 ---
@@ -541,36 +531,20 @@ uvicorn app.main:app --reload
 
 ## 26. Complete SkillBridge Ecosystem
 
-`	ext
-                                  SKILLBRIDGE ECOSYSTEM
-                                           â”‚
-                                 ORGANIZATION SELECTION
-                                           â”‚
-                    â”Œâ”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”´â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”
-                    â–¼                                             â–¼
-             MY ORGANIZATION                               EXTERNAL NETWORK
-                    â””â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”¬â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”˜
-                                           â–¼
-                                    STUDENT PROFILE
-                                           â”‚
-                    â”Œâ”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”¼â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”
-                    â–¼                      â–¼                      â–¼
-                CAN TEACH            WANTS TO LEARN            PROJECTS
-                    â””â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”¬â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”˜
-                                           â–¼
-                                    AI MATCH ENGINE
-                                           â”‚
-             â”Œâ”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”¼â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”
-             â–¼                             â–¼                             â–¼
-    KNOWLEDGE EXCHANGE               STUDENT MENTOR                 LEARNING HUB
-   (Peer-to-Peer Learn)            (Doubt Resolution)            (Structured Courses)
-             â””â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”¬â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”˜
-                                           â–¼
-                                    SKILL VERIFICATION
-                                           â”‚
-                                     REPUTATION / XP
-                                           â”‚
-                                     BECOME MENTOR!
+`mermaid
+graph TD
+    Ecosystem["SKILLBRIDGE ECOSYSTEM"] --> Org["Organization Selection"]
+    Org --> Scope["My Org / External Network"]
+    Scope --> Profile["Student Profile"]
+    Profile --> Pillars
+    
+    subgraph Pillars ["Core Pillars"]
+        Exchange["Knowledge Exchange"]
+        Mentorship["Student Mentorship"]
+        Learning["Learning Hub"]
+    end
+    
+    Pillars --> Growth["Skill Growth & Verification"] --> Mentor["Become Mentor"]
 `
 
 ---
