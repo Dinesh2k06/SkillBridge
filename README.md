@@ -82,25 +82,25 @@ SkillBridge supports two primary knowledge flows.
 
 Students exchange knowledge directly with other students.
 
-`mermaid
+```mermaid
 graph TD
     subgraph KnowledgeExchange ["2D Peer Knowledge Exchange Flow"]
         StudentA["Student A<br/>â€¢ Can Teach: Python<br/>â€¢ Wants to Learn: UI/UX"] --> Matching["SkillBridge Matching Engine"]
         StudentB["Student B<br/>â€¢ Can Teach: UI/UX<br/>â€¢ Wants to Learn: Python"] --> Matching
         Matching --> Exchange["Peer Skill Exchange Session"]
     end
-`
+```
 
 ### Money â†’ Knowledge
 
 Students can access structured courses and other learning resources.
 
-`mermaid
+```mermaid
 graph LR
     subgraph CourseFlow ["2D Course & Verification Flow"]
         Student["Student"] --> Course["Course / Learning Resource"] --> Learn["Learn"] --> Practice["Practice"] --> Project["Build Project"] --> SkillVerification["Skill Verification"]
     end
-`
+```
 
 ---
 
@@ -148,7 +148,7 @@ Each student has a SkillBridge profile containing:
 
 ### Example Profile
 
-`	ext
+```text
 Bharani Dharan
 AI & Data Science
 SNS College of Engineering
@@ -169,7 +169,7 @@ Projects:
 Verified Skills:
 - Python
 - Machine Learning
-`
+```
 
 ---
 
@@ -190,7 +190,7 @@ The matching system can consider:
 
 ### Reciprocal Matching Example
 
-`	ext
+```text
 Student A
 Can Teach  -> Python
 Wants      -> Figma
@@ -198,17 +198,17 @@ Wants      -> Figma
 Student B
 Can Teach  -> Figma
 Wants      -> Python
-`
+```
 
 SkillBridge identifies the relationship as a potential **reciprocal skill match**. This provides a clear reason for both students to connect.
 
-`mermaid
+```mermaid
 graph TD
     subgraph ReciprocalMatching ["2D Reciprocal Matching Flow"]
         SA["Student A<br/>Can Teach: Python | Wants: Figma"] <--> SB["Student B<br/>Can Teach: Figma | Wants: Python"]
         SA <--> GeminiAI["Google Gemini Matcher"] <--> SB
     end
-`
+```
 
 ---
 
@@ -218,7 +218,7 @@ Students can create skill exchange requests.
 
 ### Example Request
 
-`	ext
+```text
 I can teach:
 Python
 
@@ -227,7 +227,7 @@ Figma
 
 Preferred:
 30-minute sessions
-`
+```
 
 A suitable student can accept the exchange request. The platform can then support:
 
@@ -249,7 +249,7 @@ Students developing projects can raise technical doubts on the platform.
 
 ### Example Doubt
 
-`	ext
+```text
 Project:
 Campus Management System
 
@@ -261,13 +261,13 @@ JWT authentication is returning 401.
 
 Category:
 Backend Development
-`
+```
 
 SkillBridge identifies students with relevant skills and recommends suitable mentors.
 
 ### Mentor Matching Flow
 
-`mermaid
+```mermaid
 graph TD
     subgraph MentorWorkflow ["2D Mentor Matching Flow"]
         Doubt["Project Doubt Raised"] --> AICat["AI Classification (Gemini)"]
@@ -277,7 +277,7 @@ graph TD
         Request --> Session["Discussion / Mentoring Session"]
         Session --> Resolution["Problem Resolution"]
     end
-`
+```
 
 Mentors can provide:
 
@@ -347,7 +347,7 @@ The Learning Hub supports the **Money â†’ Knowledge** learning model throug
 
 Learning and peer interaction are connected.
 
-`mermaid
+```mermaid
 graph TD
     subgraph LearningMentoringFlow ["2D Learning + Mentoring Integration Flow"]
         Course["Course"] --> Learn["Learn"] --> Practice["Practice"] --> Build["Build Project"]
@@ -355,7 +355,7 @@ graph TD
         CheckStuck -- Yes --> HelpHub["Project Help Hub"] --> Mentor["Student Mentor"] --> Resolve["Resolve Problem"] --> Complete["Complete Project"] --> Verify["Skill Verification"]
         CheckStuck -- No --> Complete
     end
-`
+```
 
 ---
 
@@ -376,7 +376,7 @@ Students can provide:
 
 ### Verification Flow
 
-`mermaid
+```mermaid
 graph TD
     subgraph VerificationPipeline ["2D Skill Verification Pipeline"]
         Added["Skill Added"] --> Evidence["Evidence / Assessment"]
@@ -384,7 +384,7 @@ graph TD
         Challenge --> PeerFB["Peer Feedback"]
         PeerFB --> Verified["Verified Skill Badge"]
     end
-`
+```
 
 Verified skills can be displayed on the student's SkillBridge profile.
 
@@ -421,7 +421,7 @@ SkillBridge can connect students with complementary skills.
 
 ### Example Team Assembly
 
-`mermaid
+```mermaid
 graph TD
     subgraph TeamCollaboration ["2D Multi-Disciplinary Team Flow"]
         AIML["AI / ML Student"] --> Team["Project Team"]
@@ -429,7 +429,7 @@ graph TD
         Backend["Backend Student"] --> Team
         UIUX["UI / UX Student"] --> Team
     end
-`
+```
 
 Students can discover potential collaborators based on project requirements and skill compatibility.
 
@@ -439,7 +439,7 @@ Students can discover potential collaborators based on project requirements and 
 
 Each organization can have its own SkillBridge network.
 
-`mermaid
+```mermaid
 graph TD
     subgraph OrgNetwork ["2D Organization Skill Network Tree"]
         Org["SNS College of Engineering"] --> AIML["AI / ML"]
@@ -450,7 +450,7 @@ graph TD
         Org --> Cloud["Cloud"]
         Org --> Other["Other Skills"]
     end
-`
+```
 
 Students can discover available skills and potential mentors within their organization. If a suitable person is unavailable, students can expand their search according to their selected network scope.
 
@@ -462,23 +462,23 @@ SkillBridge can provide organization-level insights such as:
 
 ### Available Skills
 
-`	ext
-Python       â–ˆâ–ˆâ–ˆâ–ˆâ–ˆâ–ˆâ–ˆâ–ˆâ–ˆâ–ˆ
-AI/ML        â–ˆâ–ˆâ–ˆâ–ˆâ–ˆâ–ˆâ–ˆâ–ˆ
-Web Dev      â–ˆâ–ˆâ–ˆâ–ˆâ–ˆâ–ˆâ–ˆ
-UI/UX        â–ˆâ–ˆâ–ˆâ–ˆâ–ˆ
-Cloud        â–ˆâ–ˆâ–ˆ
-`
+```text
+Python       ██████████
+AI/ML        ████████
+Web Dev      ███████
+UI/UX        █████
+Cloud        ███
+```
 
 ### Skill Demand
 
 | Skill | Demand Level | Supply |
 |---|---|---|
-| **React** | HIGH | Moderate |
-| **Figma** | HIGH | Low |
-| **Cloud** | MEDIUM | Low |
-| **Flutter** | MEDIUM | Moderate |
-| **Python** | LOW | High |
+| **React** | `HIGH` | Moderate |
+| **Figma** | `HIGH` | Low |
+| **Cloud** | `MEDIUM` | Low |
+| **Flutter** | `MEDIUM` | Moderate |
+| **Python** | `LOW` | High |
 
 These insights can help identify differences between skills available within the organization and skills students want to learn.
 
@@ -486,7 +486,7 @@ These insights can help identify differences between skills available within the
 
 ## 16. System Architecture
 
-`mermaid
+```mermaid
 graph TD
     subgraph Architecture ["2D System Architecture Flow"]
         User["USER<br/>Student / Mentor"] --> Frontend["React + TS<br/>Frontend / UI"]
@@ -502,7 +502,7 @@ graph TD
         
         DB --- DataNodes["Students / Profiles | Skills / Courses | Projects / Mentoring / Feedback"]
     end
-`
+```
 
 ---
 
@@ -582,7 +582,7 @@ Potential AI responsibilities include:
 
 #### Example: Project Doubt Analysis
 
-`	ext
+```text
 Input:
 "JWT authentication is not working in my FastAPI project."
 
@@ -602,7 +602,7 @@ FastAPI + JWT
 
 Recommended:
 Backend Mentors
-`
+```
 
 ---
 
@@ -638,7 +638,7 @@ The system will use PostgreSQL for structured application data.
 
 #### Simplified Relationship
 
-`mermaid
+```mermaid
 graph TD
     subgraph DBEntities ["2D Database Entity Relationships"]
         Org["Organization"] --> Users["Users"]
@@ -650,13 +650,13 @@ graph TD
         Users --> Courses["Courses"]
         Users --> FB["Feedback"]
     end
-`
+```
 
 ---
 
 ## 18. API Structure
 
-`	ext
+```text
 /api
 |
 +-- /auth
@@ -706,13 +706,13 @@ graph TD
     +-- matching
     +-- doubt-analysis
     +-- recommendations
-`
+```
 
 ---
 
 ## 19. AI Matching Flow
 
-`mermaid
+```mermaid
 graph TD
     subgraph AIMatchingFlow ["2D AI Skill & Mentor Matching Workflow"]
         Profile["Student Profile<br/>â€¢ Organization<br/>â€¢ Skills<br/>â€¢ Learning Goals<br/>â€¢ Experience<br/>â€¢ Project Requirements"] --> Backend["FastAPI Backend"]
@@ -728,7 +728,7 @@ graph TD
         MentorMatch --> RecUsers
         ProjectMatch --> RecUsers
     end
-`
+```
 
 ---
 
@@ -751,7 +751,7 @@ The platform should support:
 
 ### Security Access Flow
 
-`mermaid
+```mermaid
 graph TD
     subgraph SecurityFlow ["2D Security & Access Flow"]
         Student["Student"] --> Org["Organization Verification"]
@@ -763,7 +763,7 @@ graph TD
         Discover --> Mentor["Mentor"]
         Discover --> Collaborate["Collaborate"]
     end
-`
+```
 
 ---
 
@@ -826,7 +826,7 @@ Can:
 
 ## 22. End-to-End User Flow
 
-`mermaid
+```mermaid
 graph TD
     subgraph UserJourney ["2D End-to-End User Journey"]
         Register["REGISTER"] --> SelectOrg["SELECT ORGANIZATION"]
@@ -852,13 +852,13 @@ graph TD
         Reputation --> Mentor["BECOME MENTOR"]
         Mentor --> HelpOthers["HELP OTHER STUDENTS"]
     end
-`
+```
 
 ---
 
 ## 23. Project Structure
 
-`	ext
+```text
 SkillBridge/
 |
 +-- frontend/
@@ -895,13 +895,13 @@ SkillBridge/
 +-- .env.example
 +-- .gitignore
 +-- README.md
-`
+```
 
 ---
 
 ## 24. Environment Variables
 
-`env
+```env
 # Backend
 DATABASE_URL=postgresql://user:password@localhost:5432/skillbridge_db
 
@@ -913,7 +913,7 @@ SECRET_KEY=your_super_secret_jwt_key
 
 # Frontend
 VITE_API_BASE_URL=http://localhost:8000/api
-`
+```
 
 Sensitive credentials must not be committed to the repository.
 
@@ -923,17 +923,17 @@ Sensitive credentials must not be committed to the repository.
 
 ### Frontend
 
-`ash
+```bash
 npm install
 npm run dev
-`
+```
 
 ### Backend
 
-`ash
+```bash
 pip install -r requirements.txt
 uvicorn app.main:app --reload
-`
+```
 
 The exact commands may be adjusted according to the final project configuration.
 
@@ -941,7 +941,7 @@ The exact commands may be adjusted according to the final project configuration.
 
 ## 26. Complete SkillBridge Ecosystem
 
-`mermaid
+```mermaid
 graph TD
     subgraph CompleteEcosystem ["2D Complete SkillBridge Ecosystem"]
         SB["SKILLBRIDGE"] --> Org["ORGANIZATION SELECTION"]
@@ -974,7 +974,7 @@ graph TD
         BecomeMentor --> HelpStudents["HELP OTHER STUDENTS"]
         HelpStudents --> NetGrows["NETWORK GROWS"]
     end
-`
+```
 
 ---
 
